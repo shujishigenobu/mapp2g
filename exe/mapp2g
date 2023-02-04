@@ -1,3 +1,27 @@
 #!/usr/bin/env ruby
 
 require "mapp2g"
+require 'bio'
+require 'tempfile'
+
+query = ARGV[0]
+genome = ARGV[1]
+outdir = (ARGV[2] || "mapp2g_out_#{$$}")
+mapp2g_exe = "./mapp2g.rb"
+
+Dir.mkdir(outdir)
+
+Bio::FlatFile.open(Bio::FastaFormat, query).each_with_index do |fas, i|
+  tf = Tempfile.new("#{fas.entry_id}")
+  tf.puts fas
+  tf.close
+  id = (i + 1).to_s
+  query_file_path = "#{outdir}/#{id}.fasta"
+  out_file_path = "#{outdir}/#{id}.exonerate.txt"
+  File.open(query_file_path, "w"){|o| o.puts fas}
+
+  mapper = Mapp2g::Mapper.new()
+  res = mapper.run(query_file_path, genome)
+  File.open(out_file_path, "w"){|o| o.puts res}
+
+end
