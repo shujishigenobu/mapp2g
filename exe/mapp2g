@@ -15,14 +15,22 @@ begin
     puts Mapp2g::VERSION
     exit
   end
-  opt.on("-q QUERY", "--query", "query amino acid sequences in FASTA format"){|v| OPTS[:q] = v}
-  opt.on("-g BLASTDB", "--genome", "genome reference as blastdb"){|v| OPTS[:g] = v}
+  opt.on("-q QUERY", "--query", "query amino acid sequences in FASTA format. REQUIRED."){|v| OPTS[:q] = v}
+  opt.on("-g BLASTDB", "--genome", "genome reference as blastdb. REQUIRED."){|v| OPTS[:g] = v}
   opt.on("-o [OUTDIR]", "--outdir", "output directory. DEFAULT: mapp2g_out_{process_id}"){|v| OPTS[:o] = v}
   opt.on_tail('-h', '--help', 'show this help message and exit') do
     puts opt
     exit
   end
+
+  if ARGV.size == 0
+    puts opt
+    exit
+  end
+
   opt.parse!(ARGV)
+
+
 rescue => e
   puts "ERROR: #{e}\nSee #{opt}"
   exit
