@@ -1,34 +1,42 @@
 # Mapp2g
 
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/mapp2g`. To experiment with that code, run `bin/console` for an interactive prompt.
-
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+### Pre-requisites
 
-Install the gem and add to the application's Gemfile by executing:
+  * NCBI blast
+  * exonerate
+  
+These two software should be installed. mapp2g is wrtten in Ruby. Ruby sholud be installed.
 
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+### Install mapp2g using gem
 
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+```
+gem install mapp2g
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+Usage: mapp2g [options]
+    -q, --query QUERY                query amino acid sequences in FASTA format
+    -g, --genome BLASTDB             genome reference as blastdb
+    -o, --outdir [OUTDIR]            output directory. DEFAULT: mapp2g_out_{process_id}
+    -v, --version                    show version number
+    -h, --help                       show this help message and exit
+```
 
-## Development
+(example)
+```
+mapp2g -q human_genome.fasta -q p53.protein.fasta
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Reference genomes should be formated in blastdb before running mapp2g. blastdb can be made as follws:
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```
+makeblastdb -in human_genome.fasta -dbtype nucl -parse_seqids
+```
 
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/mapp2g.
 
 ## License
 
