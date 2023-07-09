@@ -5,6 +5,7 @@ require 'bio'
 require 'tempfile'
 require 'optparse'
 
+### Parse options
 
 opt = OptionParser.new
 OPTS = {}
@@ -30,7 +31,6 @@ begin
 
   opt.parse!(ARGV)
 
-
 rescue => e
   puts "ERROR: #{e}\nSee #{opt}"
   exit
@@ -43,6 +43,34 @@ genome = OPTS[:g]
 outdir = (OPTS[:o] || "mapp2g_out_#{$$}")
 
 #p [query, genome, outdir]
+
+### Check environment
+
+def command?(name)
+  `which #{name}`
+  unless $?.success?
+    raise "#{name} command not found"
+  end
+end
+
+begin
+  command?("exonerate")
+  command?("blastn")
+rescue => e
+  puts "ERROR: #{e}"
+  exit(1)
+end
+
+begin
+  unless File.exist?("#{genome}.nsq") && File.exist?("#{genome}.nos")
+    raise "genome is not indexed. Please run 'makeblastdb -in #{genome} -dbtype nucl -parse_seqids'"
+  end
+rescue => e
+  puts "ERROR: #{e}"
+  exit(1)
+end
+
+### Main
 
 Dir.mkdir(outdir)
 
