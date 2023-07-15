@@ -62,6 +62,9 @@ rescue => e
 end
 
 begin
+  unless File.exist?(genome)
+    raise "genome file (#{genome}) not found"
+  end
   unless File.exist?("#{genome}.nsq") && File.exist?("#{genome}.nos")
     raise "genome is not indexed. Please run 'makeblastdb -in #{genome} -dbtype nucl -parse_seqids'"
   end
@@ -87,4 +90,7 @@ Bio::FlatFile.open(Bio::FastaFormat, query).each_with_index do |fas, i|
   res = mapper.run(query_file_path, genome)
   File.open(out_file_path, "w"){|o| o.puts res}
 
+  gff3 = Mapp2g::ExonerateOutput.new(res).to_gff3()
+  out_file_path = "#{outdir}/#{id}.exonerate.gff3"
+  File.open(out_file_path, "w"){|o| o.puts gff3}
 end

@@ -1,0 +1,366 @@
+Command line: [exonerate -q mapp2g_out_3770633/10.fasta -t /tmp/mapp2g-377063320230709-3770633-rjfx1k --model protein2genome --bestn 1 --showquerygff yes --showtargetgff yes --showcigar yes]
+Hostname: [ip-10-0-6-102]
+
+C4 Alignment:
+------------
+         Query: FBpp0071967 pep primary_assembly:BDGP6.32:2R:23523856:23528260:1 gene:FBgn0261786 transcript:FBtr0072058 gene_biotype:protein_coding transcript_biotype:protein_coding gene_symbol:mi description:minus
+        Target: 2R
+         Model: protein2genome:local
+     Raw score: 4692
+   Query range: 0 -> 941
+  Target range: 23524349 -> 23527635
+
+        1 : MetAlaThrIleGlyAsnLysIleAsnAsnSerTyrGluSerGluProSerThr :       18
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            MetAlaThrIleGlyAsnLysIleAsnAsnSerTyrGluSerGluProSerThr
+ 23524350 : ATGGCCACTATTGGAAACAAGATAAACAACAGCTACGAATCGGAGCCTTCTACA : 23524401
+
+       19 : GlySerGly  >>>> Target Intron 1 >>>>  SerSerLeuSerGluA :       27
+            |||||||||            57 bp            ||||||||||||||||
+            GlySerGly++                         ++SerSerLeuSerGluA
+ 23524402 : GGAAGCGGGgt.........................agTCTTCGCTCAGTGAAA : 23524485
+
+       28 : snAsnGluSerHisIleSerAspGluAspHisMetAsnLeuProTyrLeuMetL :       45
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            snAsnGluSerHisIleSerAspGluAspHisMetAsnLeuProTyrLeuMetL
+ 23524486 : ACAATGAGAGCCACATATCTGACGAGGATCACATGAACTTACCGTATCTGATGA : 23524539
+
+       46 : ysProLysAlaLeuSerSerGlnProIleLysGluThrProThrProProAsnP :       63
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            ysProLysAlaLeuSerSerGlnProIleLysGluThrProThrProProAsnP
+ 23524540 : AACCGAAAGCACTGAGCAGCCAGCCCATCAAGGAAACCCCAACGCCACCCAATC : 23524593
+
+       64 : roLysThrGlySerGlnGluSerGlnPheLeuGlyPheGlyAspSerProTyrG :       81
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            roLysThrGlySerGlnGluSerGlnPheLeuGlyPheGlyAspSerProTyrG
+ 23524594 : CGAAGACGGGCAGCCAGGAATCGCAGTTCCTGGGCTTCGGAGACAGCCCATATG : 23524647
+
+       82 : lyGlnValAsnLysArgLeuTyrGlySerGlnLeuGlnAsnLeuLysLeuProG :       99
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            lyGlnValAsnLysArgLeuTyrGlySerGlnLeuGlnAsnLeuLysLeuProG
+ 23524648 : GCCAGGTGAACAAGCGTCTGTATGGCTCCCAGCTGCAGAACCTTAAGCTGCCGG : 23524701
+
+      100 : luValGluProProAlaValArgArgProSerProGlyLysIleValPheProA :      117
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            luValGluProProAlaValArgArgProSerProGlyLysIleValPheProA
+ 23524702 : AGGTGGAGCCCCCTGCCGTCCGACGTCCCTCGCCGGGCAAGATTGTCTTTCCCC : 23524755
+
+      118 : rgPheTyrAspThrLeuIleGluGluAsnSerCysAsnAlaValAspMetAlaV :      135
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            rgPheTyrAspThrLeuIleGluGluAsnSerCysAsnAlaValAspMetAlaV
+ 23524756 : GGTTCTACGACACCCTCATCGAGGAGAACAGCTGCAATGCCGTGGACATGGCCG : 23524809
+
+      136 : alSerValAlaThrThrAlaThrThrThrThrGlySerLeuSerPheAspGlyL :      153
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            alSerValAlaThrThrAlaThrThrThrThrGlySerLeuSerPheAspGlyL
+ 23524810 : TGTCAGTGGCCACGACAGCCACCACGACAACGGGCAGCCTCTCCTTCGATGGCA : 23524863
+
+      154 : ysIleLysSerLeuThrAlaLysProGluIleGlnAspLysProGlyProSerA :      171
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            ysIleLysSerLeuThrAlaLysProGluIleGlnAspLysProGlyProSerA
+ 23524864 : AAATCAAGAGCCTGACCGCAAAGCCCGAAATTCAGGACAAGCCTGGGCCCTCCA : 23524917
+
+      172 : snAlaThrAsnProArgLeuSerAsnValLeuGluThrSerLeuAsnThrSerG :      189
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            snAlaThrAsnProArgLeuSerAsnValLeuGluThrSerLeuAsnThrSerG
+ 23524918 : ATGCTACGAATCCACGTCTGTCAAACGTGCTAGAAACCTCGCTCAACACCTCGC : 23524971
+
+      190 : lnGlnLysPheAsnAsnGluArgSerProAspLeuPheAlaAspSerAspAspG :      207
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            lnGlnLysPheAsnAsnGluArgSerProAspLeuPheAlaAspSerAspAspG
+ 23524972 : AGCAGAAGTTCAACAACGAACGCTCACCTGATCTCTTTGCCGACAGCGACGATG : 23525025
+
+      208 : luAlaAspAsnAspGluGlnProGluLysGluProProThrArgLeuGluAspL :      225
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            luAlaAspAsnAspGluGlnProGluLysGluProProThrArgLeuGluAspL
+ 23525026 : AAGCTGACAACGACGAGCAACCGGAAAAAGAGCCGCCCACCAGGCTGGAGGATC : 23525079
+
+      226 : euProGluValLeuGluGluSerGlnCysThrSerAspAlaArgAlaArgSerS :      243
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            euProGluValLeuGluGluSerGlnCysThrSerAspAlaArgAlaArgSerS
+ 23525080 : TGCCCGAAGTGTTGGAAGAGTCGCAGTGCACCAGCGACGCACGAGCTCGCTCCT : 23525133
+
+      244 : erLeuAsnAlaProThrGluSerSerPheValAspGluGlnThrMetAspLeuS :      261
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            erLeuAsnAlaProThrGluSerSerPheValAspGluGlnThrMetAspLeuS
+ 23525134 : CGCTGAATGCTCCCACGGAGTCCAGTTTTGTGGATGAGCAGACGATGGACCTTT : 23525187
+
+      262 : erSerThrGlnLeuAsnAlaAsnAspProArgSerHisPheLeuGluAsnCysA :      279
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            erSerThrGlnLeuAsnAlaAsnAspProArgSerHisPheLeuGluAsnCysA
+ 23525188 : CGAGCACCCAGCTGAACGCCAACGACCCCCGGTCGCACTTCTTGGAGAACTGCA : 23525241
+
+      280 : rgArgGluArgGluLeuTyrArgArgIleArgArgCysLeuGlnGlyValArgP :      297
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            rgArgGluArgGluLeuTyrArgArgIleArgArgCysLeuGlnGlyValArgP
+ 23525242 : GGAGAGAACGGGAGCTGTATCGGCGGATTCGTCGCTGCCTACAGGGAGTTCGTC : 23525295
+
+      298 : roProProSerValThrAlaProAspValAspValIleLysMetValLeuSerM :      315
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            roProProSerValThrAlaProAspValAspValIleLysMetValLeuSerM
+ 23525296 : CGCCGCCCTCGGTGACTGCACCCGATGTGGACGTCATCAAAATGGTGCTTAGCA : 23525349
+
+      316 : etLysSerAsnValLeuAsnPheLeuSerLysAspSerProProSerThrProA :      333
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            etLysSerAsnValLeuAsnPheLeuSerLysAspSerProProSerThrProA
+ 23525350 : TGAAATCAAACGTGCTAAACTTTCTCTCCAAGGATAGCCCACCATCTACACCCA : 23525403
+
+      334 : rgIleGluAspSerGlyIleSerGluThrThrSerLeuPheArgProSerHisS :      351
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            rgIleGluAspSerGlyIleSerGluThrThrSerLeuPheArgProSerHisS
+ 23525404 : GAATCGAGGACAGTGGCATTAGCGAAACAACCTCACTGTTTCGACCATCTCACA : 23525457
+
+      352 : erLeuSerGluAlaGlnAsnMetGlyTrpArgAspValLeuGlyValArgHisH :      369
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            erLeuSerGluAlaGlnAsnMetGlyTrpArgAspValLeuGlyValArgHisH
+ 23525458 : GTCTCTCGGAGGCTCAAAACATGGGCTGGCGGGATGTGCTGGGAGTAAGACATC : 23525511
+
+      370 : isGlyLeu{Se}  >>>> Target Intron 2 >>>>  {r}TyrAsnLeuA :      376
+            ||||||||{||}            62 bp            {|}||||||||||
+            isGlyLeu{Se}++                         ++{r}TyrAsnLeuA
+ 23525512 : ATGGACTG{AG}gt.........................ag{C}TACAATCTTA : 23525594
+
+      377 : snLysAlaAlaGluGlnAsnGluTyrLeuSerMetSerValValAspArgTyrV :      394
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            snLysAlaAlaGluGlnAsnGluTyrLeuSerMetSerValValAspArgTyrV
+ 23525595 : ACAAGGCTGCCGAACAAAATGAATACCTCAGCATGTCCGTGGTGGACCGCTATG : 23525648
+
+      395 : alGlyValGluThrAlaThrSerTyrValArgSerProSerSerAlaLysLysA :      412
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            alGlyValGluThrAlaThrSerTyrValArgSerProSerSerAlaLysLysA
+ 23525649 : TGGGCGTGGAAACCGCGACGTCCTATGTGAGATCGCCATCGAGCGCCAAGAAGA : 23525702
+
+      413 : rgAsnMetArgMet{Ly}  >>>> Target Intron 3 >>>>  {s}MetL :      419
+            ||||||||||||||{||}            60 bp            {|}||||
+            rgAsnMetArgMet{Ly}++                         ++{s}MetL
+ 23525703 : GAAACATGCGTATG{AA}gt.........................ag{A}ATGT : 23525783
+
+      420 : euThrGlnSerProGlyAsnArgLeuSerHisLeuAlaLysArgArgAlaIleP :      437
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            euThrGlnSerProGlyAsnArgLeuSerHisLeuAlaLysArgArgAlaIleP
+ 23525784 : TAACCCAATCGCCTGGCAATCGCCTCAGTCATTTGGCCAAACGACGTGCCATAT : 23525837
+
+      438 : heSerSerAlaAsnLeuAlaThrAsnSerGlnLysLeuAsnSerSerIleGlyP :      455
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            heSerSerAlaAsnLeuAlaThrAsnSerGlnLysLeuAsnSerSerIleGlyP
+ 23525838 : TTTCATCTGCGAATCTAGCCACCAACTCACAGAAGCTTAACAGCTCAATTGGAC : 23525891
+
+      456 : roGlnIleMetLeuAspLys{Ly}  >>>> Target Intron 4 >>>>  { :      462
+            ||||||||||||||||||||{||}            63 bp            {
+            roGlnIleMetLeuAspLys{Ly}++                         ++{
+ 23525892 : CACAAATAATGCTAGATAAG{AA}gt.........................ag{ : 23525977
+
+      463 : s}LysValArgAsnLysArgLysAlaThrProLysArgLysThrProGlySerL :      480
+            |}||||||||||||||||||||||||||||||||||||||||||||||||||||
+            s}LysValArgAsnLysArgLysAlaThrProLysArgLysThrProGlySerL
+ 23525978 : A}AAAGTGCGAAATAAACGCAAGGCCACGCCCAAGCGAAAGACGCCGGGCAGCA : 23526029
+
+      481 : ysLysLys{A}  >>>> Target Intron 5 >>>>  {la}ArgLysThrP :      487
+            ||||||||{|}            57 bp            {||}||||||||||
+            ysLysLys{A}++                         ++{la}ArgLysThrP
+ 23526030 : AGAAAAAA{G}gt.........................ag{CT}CGCAAGACGC : 23526107
+
+      488 : roSerSerSerAlaArgLysArgLeuTyrArgThrAspLeuIleLysProGlyP :      505
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            roSerSerSerAlaArgLysArgLeuTyrArgThrAspLeuIleLysProGlyP
+ 23526108 : CATCTTCATCCGCCCGAAAGCGCCTCTACCGCACTGATCTCATCAAGCCAGGAC : 23526161
+
+      506 : roSerArgGluThrSerLysArgAlaLeuPheGlnSerProAlaLysThrLeuG :      523
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            roSerArgGluThrSerLysArgAlaLeuPheGlnSerProAlaLysThrLeuG
+ 23526162 : CTTCGAGAGAAACCTCTAAGCGTGCCTTATTCCAAAGTCCGGCCAAAACCCTGC : 23526215
+
+      524 : lnGlnGlnGlnLeuMetProProLysProLeuPheLysProGluIleAlaAsnA :      541
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            lnGlnGlnGlnLeuMetProProLysProLeuPheLysProGluIleAlaAsnA
+ 23526216 : AGCAACAGCAGCTAATGCCGCCCAAACCGCTCTTCAAGCCGGAGATTGCGAACC : 23526269
+
+      542 : rgValGluArgSerLysArgAlaLeuPheSerProAspHisGlnGlySerSerA :      559
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            rgValGluArgSerLysArgAlaLeuPheSerProAspHisGlnGlySerSerA
+ 23526270 : GCGTAGAGCGGTCGAAGCGCGCTCTCTTTTCGCCGGATCACCAGGGCAGCAGTA : 23526323
+
+      560 : snGlnLeuGluSerIleLeuLysArgLysArgAsnAlaCysAspAspAspGluA :      577
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            snGlnLeuGluSerIleLeuLysArgLysArgAsnAlaCysAspAspAspGluA
+ 23526324 : ACCAGCTGGAGTCGATCCTGAAGCGGAAAAGAAACGCCTGCGATGACGACGAGG : 23526377
+
+      578 : spSerAlaAspLeuAlaSerGlnSerSerLysLeuPheArgAlaGluSerSerG :      595
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            spSerAlaAspLeuAlaSerGlnSerSerLysLeuPheArgAlaGluSerSerG
+ 23526378 : ATTCAGCTGATTTGGCTAGCCAGAGCAGCAAGCTCTTCCGGGCCGAGAGCAGTG : 23526431
+
+      596 : lyProSerGlyLeuThrProArgAlaLeuLysIleLysSerGlnSerPheCysI :      613
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            lyProSerGlyLeuThrProArgAlaLeuLysIleLysSerGlnSerPheCysI
+ 23526432 : GACCCAGTGGGTTGACTCCTCGCGCTCTAAAGATCAAGAGCCAGAGTTTCTGCA : 23526485
+
+      614 : leGlyAlaGlySerSerThrAlaGlyValGlnLeuLysLeuAlaGlnHisAlaA :      631
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            leGlyAlaGlySerSerThrAlaGlyValGlnLeuLysLeuAlaGlnHisAlaA
+ 23526486 : TTGGAGCTGGTTCCTCCACTGCGGGTGTTCAGCTAAAGTTGGCGCAGCACGCGG : 23526539
+
+      632 : laAlaThrProGlyGlnThrArgLeuSerLeuGlyLeuSerGlySerSerSerA :      649
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            laAlaThrProGlyGlnThrArgLeuSerLeuGlyLeuSerGlySerSerSerA
+ 23526540 : CTGCTACCCCTGGGCAGACGCGGCTCAGTCTTGGCCTGAGCGGCAGCAGTAGCA : 23526593
+
+      650 : snLeuValAsnProAlaSerPheAlaSerGlyThrProLeuAlaSerLysLeuH :      667
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            snLeuValAsnProAlaSerPheAlaSerGlyThrProLeuAlaSerLysLeuH
+ 23526594 : ACCTGGTTAACCCGGCATCTTTTGCAAGCGGTACGCCACTGGCGAGTAAACTGC : 23526647
+
+      668 : isArgAlaHisSerGluMetSerAlaThrProAsnSerSerMetThrAspAsnG :      685
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            isArgAlaHisSerGluMetSerAlaThrProAsnSerSerMetThrAspAsnG
+ 23526648 : ACAGAGCGCACTCGGAGATGAGCGCCACACCGAATAGCAGTATGACTGATAACC : 23526701
+
+      686 : lnArgLys  >>>> Target Intron 6 >>>>  LysLeuLeuTrpAlaVa :      693
+            ||||||||            104 bp           |||||||||||||||||
+            lnArgLys++                         ++LysLeuLeuTrpAlaVa
+ 23526702 : AGCGAAAGgt.........................agAAACTCCTTTGGGCTGT : 23526829
+
+      694 : lSerGlnAlaLeuGlnGluLysLysIleThrProLysHisGluGlnPheArgGl :      711
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            lSerGlnAlaLeuGlnGluLysLysIleThrProLysHisGluGlnPheArgGl
+ 23526830 : GTCGCAGGCACTGCAGGAGAAGAAAATTACGCCGAAGCACGAGCAATTCCGTCA : 23526883
+
+      712 : nHisAlaAlaAspLeuThrArgIleValLysArgIlePheGlnGluPheTyrLe :      729
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            nHisAlaAlaAspLeuThrArgIleValLysArgIlePheGlnGluPheTyrLe
+ 23526884 : GCATGCGGCAGACCTTACGCGCATTGTGAAGCGCATCTTCCAGGAATTCTACCT : 23526937
+
+      730 : uGlyHisSerSerSerAsnSerGluThrLeuLeu{Ar}  >>>> Target In :      741
+            ||||||||||||||||||||||||||||||||||{||}            60 b
+            uGlyHisSerSerSerAsnSerGluThrLeuLeu{Ar}++              
+ 23526938 : GGGACATTCGTCCAGCAACAGCGAAACACTGCTA{AG}gt.............. : 23526977
+
+      742 : tron 7 >>>>  {g}LeuAlaLysLysPheAlaPheSerValIleAlaGlyLy :      754
+            p            {|}||||||||||||||||||||||||||||||||||||||
+                       ++{g}LeuAlaLysLysPheAlaPheSerValIleAlaGlyLy
+ 23526978 : ...........ag{G}CTGGCCAAGAAGTTTGCCTTTAGCGTGATTGCGGGGAA : 23527072
+
+      755 : sAsnAlaAspAspValTyrLeuGlnAlaArgSerGlnGluCysGluAlaLysAr :      772
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            sAsnAlaAspAspValTyrLeuGlnAlaArgSerGlnGluCysGluAlaLysAr
+ 23527073 : GAATGCGGACGACGTTTACCTGCAGGCGCGCAGTCAGGAATGCGAGGCCAAGCG : 23527126
+
+      773 : gLeuSerSerThrArgLeuSerGlyTyrIleGlyProGluGluPheAlaGlnAr :      790
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            gLeuSerSerThrArgLeuSerGlyTyrIleGlyProGluGluPheAlaGlnAr
+ 23527127 : GTTGTCGAGCACCCGCCTCTCGGGCTACATCGGTCCGGAGGAGTTTGCCCAGCG : 23527180
+
+      791 : gLysLeuLeuLeuSerGlnThrSerValValGlySerAlaAlaGlySerAlaAr :      808
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            gLysLeuLeuLeuSerGlnThrSerValValGlySerAlaAlaGlySerAlaAr
+ 23527181 : TAAACTGCTTCTCTCGCAAACATCGGTCGTAGGATCAGCAGCAGGTTCGGCGCG : 23527234
+
+      809 : gSerLeuHisAsnIlePheGlySerGluAsnSerIleAspSerPheGlyLeuSe :      826
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            gSerLeuHisAsnIlePheGlySerGluAsnSerIleAspSerPheGlyLeuSe
+ 23527235 : ATCCCTGCACAACATCTTCGGCAGCGAGAACTCCATCGATTCCTTCGGTCTGAG : 23527288
+
+      827 : rGlnMetSerLeuProThrAsnAlaCysSerGluThrGlnSerSerIleValAs :      844
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            rGlnMetSerLeuProThrAsnAlaCysSerGluThrGlnSerSerIleValAs
+ 23527289 : TCAAATGAGCCTGCCCACAAATGCCTGCTCCGAAACGCAATCGAGTATAGTGGA : 23527342
+
+      845 : pArgIleSerGluAspLeuPheCysLysGluArgGlnProIleArgProAsnAl :      862
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            pArgIleSerGluAspLeuPheCysLysGluArgGlnProIleArgProAsnAl
+ 23527343 : TCGCATCTCGGAGGATCTCTTCTGCAAGGAACGCCAACCCATCCGGCCCAATGC : 23527396
+
+      863 : aSerLeuGlnAsnSerSerSerLysSerAsnLeuGlyGlyLeuAlaLeuArgGl :      880
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            aSerLeuGlnAsnSerSerSerLysSerAsnLeuGlyGlyLeuAlaLeuArgGl
+ 23527397 : CTCGCTCCAGAACAGCTCGTCGAAGAGTAACCTAGGCGGACTCGCGCTGCGCGA : 23527450
+
+      881 : uAsnMetAspCysGluAlaArgArgSerAlaGlnLysAsnPheThrGlyLysAs :      898
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            uAsnMetAspCysGluAlaArgArgSerAlaGlnLysAsnPheThrGlyLysAs
+ 23527451 : GAACATGGACTGCGAGGCTCGCCGTTCGGCGCAAAAGAACTTTACCGGCAAGGA : 23527504
+
+      899 : pGlnGlnAsnIleSerProTyrPheGlyGlyGlyGlySerAsnSerSerAlaAr :      916
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            pGlnGlnAsnIleSerProTyrPheGlyGlyGlyGlySerAsnSerSerAlaAr
+ 23527505 : CCAGCAGAACATCAGTCCCTACTTCGGAGGCGGCGGAAGTAACAGCTCTGCGCG : 23527558
+
+      917 : gLysPheGlnMetProProValGlyAsnSerAsnHisSerGlyGlyLysAlaLy :      934
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            gLysPheGlnMetProProValGlyAsnSerAsnHisSerGlyGlyLysAlaLy
+ 23527559 : CAAGTTCCAAATGCCACCCGTGGGCAACAGCAACCACTCCGGAGGCAAGGCCAA : 23527612
+
+      935 : sArgGlnIleSerPheAspCys :      941
+            ||||||||||||||||||||||
+            sArgGlnIleSerPheAspCys
+ 23527613 : GAGACAGATTTCCTTTGACTGC : 23527635
+
+cigar: FBpp0071967 0 941 . 2R 23524349 23527635 + 4692  M 63 D 57 M 1050 D 64 M 133 D 62 M 133 D 65 M 61 D 58 M 614 D 104 M 159 D 62 M 601
+vulgar: FBpp0071967 0 941 . 2R 23524349 23527635 + 4692 M 21 63 5 0 2 I 0 53 3 0 2 M 350 1050 S 0 2 5 0 2 I 0 58 3 0 2 S 1 1 M 44 132 S 0 2 5 0 2 I 0 56 3 0 2 S 1 1 M 44 132 S 0 2 5 0 2 I 0 59 3 0 2 S 1 1 M 20 60 S 0 1 5 0 2 I 0 53 3 0 2 S 1 2 M 204 612 5 0 2 I 0 100 3 0 2 M 53 159 S 0 2 5 0 2 I 0 56 3 0 2 S 1 1 M 200 600
+# --- START OF GFF DUMP ---
+#
+#
+##gff-version 2
+##source-version exonerate:protein2genome:local 2.4.0
+##date 2023-07-09
+##type Protein
+#
+#
+# seqname source feature start end score strand frame attributes
+#
+FBpp0071967	exonerate:protein2genome:local	similarity	1	941	4692	.	.	alignment_id 0 ; Target 2R ; Align 1 23524350 21 ; Align 22 23524470 350 ; Align 373 23525585 44 ; Align 418 23525780 44 ; Align 463 23525978 20 ; Align 484 23526098 204 ; Align 688 23526814 53 ; Align 742 23527036 200
+# --- END OF GFF DUMP ---
+#
+# --- START OF GFF DUMP ---
+#
+#
+##gff-version 2
+##source-version exonerate:protein2genome:local 2.4.0
+##date 2023-07-09
+##type DNA
+#
+#
+# seqname source feature start end score strand frame attributes
+#
+2R	exonerate:protein2genome:local	gene	23524350	23527635	4692	+	.	gene_id 0 ; sequence FBpp0071967 ; gene_orientation + ; identity 100.00 ; similarity 100.00
+2R	exonerate:protein2genome:local	cds	23524350	23524412	.	+	.	
+2R	exonerate:protein2genome:local	exon	23524350	23524412	.	+	.	insertions 0 ; deletions 0 ; identity 100.00 ; similarity 100.00
+2R	exonerate:protein2genome:local	splice5	23524413	23524414	.	+	.	intron_id 1 ; splice_site "GT"
+2R	exonerate:protein2genome:local	intron	23524413	23524469	.	+	.	intron_id 1
+2R	exonerate:protein2genome:local	splice3	23524468	23524469	.	+	.	intron_id 0 ; splice_site "AG"
+2R	exonerate:protein2genome:local	cds	23524470	23525521	.	+	.	
+2R	exonerate:protein2genome:local	exon	23524470	23525521	.	+	.	insertions 0 ; deletions 0 ; identity 100.00 ; similarity 100.00
+2R	exonerate:protein2genome:local	splice5	23525522	23525523	.	+	.	intron_id 2 ; splice_site "GT"
+2R	exonerate:protein2genome:local	intron	23525522	23525583	.	+	.	intron_id 2
+2R	exonerate:protein2genome:local	splice3	23525582	23525583	.	+	.	intron_id 1 ; splice_site "AG"
+2R	exonerate:protein2genome:local	cds	23525584	23525718	.	+	.	
+2R	exonerate:protein2genome:local	exon	23525584	23525718	.	+	.	insertions 0 ; deletions 0 ; identity 100.00 ; similarity 100.00
+2R	exonerate:protein2genome:local	splice5	23525719	23525720	.	+	.	intron_id 3 ; splice_site "GT"
+2R	exonerate:protein2genome:local	intron	23525719	23525778	.	+	.	intron_id 3
+2R	exonerate:protein2genome:local	splice3	23525777	23525778	.	+	.	intron_id 2 ; splice_site "AG"
+2R	exonerate:protein2genome:local	cds	23525779	23525913	.	+	.	
+2R	exonerate:protein2genome:local	exon	23525779	23525913	.	+	.	insertions 0 ; deletions 0 ; identity 100.00 ; similarity 100.00
+2R	exonerate:protein2genome:local	splice5	23525914	23525915	.	+	.	intron_id 4 ; splice_site "GT"
+2R	exonerate:protein2genome:local	intron	23525914	23525976	.	+	.	intron_id 4
+2R	exonerate:protein2genome:local	splice3	23525975	23525976	.	+	.	intron_id 3 ; splice_site "AG"
+2R	exonerate:protein2genome:local	cds	23525977	23526038	.	+	.	
+2R	exonerate:protein2genome:local	exon	23525977	23526038	.	+	.	insertions 0 ; deletions 0 ; identity 100.00 ; similarity 100.00
+2R	exonerate:protein2genome:local	splice5	23526039	23526040	.	+	.	intron_id 5 ; splice_site "GT"
+2R	exonerate:protein2genome:local	intron	23526039	23526095	.	+	.	intron_id 5
+2R	exonerate:protein2genome:local	splice3	23526094	23526095	.	+	.	intron_id 4 ; splice_site "AG"
+2R	exonerate:protein2genome:local	cds	23526096	23526709	.	+	.	
+2R	exonerate:protein2genome:local	exon	23526096	23526709	.	+	.	insertions 0 ; deletions 0 ; identity 100.00 ; similarity 100.00
+2R	exonerate:protein2genome:local	splice5	23526710	23526711	.	+	.	intron_id 6 ; splice_site "GT"
+2R	exonerate:protein2genome:local	intron	23526710	23526813	.	+	.	intron_id 6
+2R	exonerate:protein2genome:local	splice3	23526812	23526813	.	+	.	intron_id 5 ; splice_site "AG"
+2R	exonerate:protein2genome:local	cds	23526814	23526974	.	+	.	
+2R	exonerate:protein2genome:local	exon	23526814	23526974	.	+	.	insertions 0 ; deletions 0 ; identity 100.00 ; similarity 100.00
+2R	exonerate:protein2genome:local	splice5	23526975	23526976	.	+	.	intron_id 7 ; splice_site "GT"
+2R	exonerate:protein2genome:local	intron	23526975	23527034	.	+	.	intron_id 7
+2R	exonerate:protein2genome:local	splice3	23527033	23527034	.	+	.	intron_id 6 ; splice_site "AG"
+2R	exonerate:protein2genome:local	cds	23527035	23527635	.	+	.	
+2R	exonerate:protein2genome:local	exon	23527035	23527635	.	+	.	insertions 0 ; deletions 0 ; identity 100.00 ; similarity 100.00
+2R	exonerate:protein2genome:local	similarity	23524350	23527635	4692	+	.	alignment_id 0 ; Query FBpp0071967 ; Align 23524350 1 63 ; Align 23524470 22 1050 ; Align 23525585 373 132 ; Align 23525780 418 132 ; Align 23525978 463 60 ; Align 23526098 484 612 ; Align 23526814 688 159 ; Align 23527036 742 600
+# --- END OF GFF DUMP ---
+#
+-- completed exonerate analysis
