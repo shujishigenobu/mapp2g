@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/mapp2g'
-#require 'mapp2g'
+#require_relative '../lib/mapp2g' # for development
+require 'mapp2g'
 require 'bio'
 require 'tempfile'
 require 'optparse'
@@ -100,10 +100,25 @@ Bio::FlatFile.open(Bio::FastaFormat, query).each_with_index do |fas, i|
     out_file_path = "#{outdir}/#{id}.exonerate.gff3"
     File.open(out_file_path, "w"){|o| o.puts gff3}
 
-    report = {"query_id" => fas.entry_id, "exonerate" => res[:exonerate_result], "blast" => res[:blast_result], "gff3" => gff3}
+    report = {
+      "runtime_id" => id,
+      "query_id" => fas.entry_id, 
+      "query_fasta" => fas.to_s,
+      "exonerate" => res[:exonerate_result], 
+      "blast" => res[:blast_result], 
+      "gff3" => gff3
+    }
     report_json_lines << report.to_json
 
   else
+    report = {
+      "runtime_id" => id,
+      "query_id" => fas.entry_id,
+      "query_fasta" => fas.to_s,
+      "exonerate" => nil,
+      "blast" => nil,
+      "gff3" => nil
+    }
     STDERR.puts "No hit for #{fas.entry_id}"
   end
 
