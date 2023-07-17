@@ -26,6 +26,9 @@ Usage: mapp2g [options]
     -h, --help                       show this help message and exit
 ```
 
+Query sequences should be in FASTA format. Multiple sequences can be included in one file.
+
+
 (example)
 ```
 mapp2g -q human_genome.fasta -q p53.protein.fasta
@@ -36,6 +39,18 @@ Reference genomes should be formated in blastdb before running mapp2g. blastdb c
 ```
 makeblastdb -in human_genome.fasta -dbtype nucl -parse_seqids
 ```
+
+## Outputs
+
+For each query, the following files are generated.
+
+- query sequence in fasta
+- blast output in tab-delmited format (format 6)
+- exonerate full output
+- exonerate alignment in gff3 format
+- report.json
+
+report.json contains all of the information above in json line format.
 
 
 ## License
