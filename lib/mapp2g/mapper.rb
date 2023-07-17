@@ -4,9 +4,9 @@ module Mapp2g
 
   class Mapper
 
-    EVALUE_DEFAULT = 1.0e-8
+    EVALUE_DEFAULT = 1.0e-5
     NCPU_DEFAULT = 4
-    MAX_HSP_INTERVAL = 50000
+    MAX_HSP_INTERVAL = 400000
     EXTENSION = 50000
     TMPDIR_DEFAULT = Dir.tmpdir
 
@@ -15,11 +15,11 @@ module Mapp2g
 
     ## step 1: tblastn
     def exec_tblastn_to_know_rough_target_region(query, genome, evalue=EVALUE_DEFAULT, ncpu=NCPU_DEFAULT)
-      cmd = "tblastn -db #{genome} -query #{query} -max_target_seqs 40 -soft_masking yes -seg yes -outfmt 6 -evalue #{evalue} -num_threads #{ncpu} "
+      cmd = "tblastn -db #{genome} -query #{query} -max_target_seqs 40 -soft_masking yes -seg yes -outfmt 6 -evalue #{evalue} -num_threads #{ncpu} -culling_limit 2"
       # puts cmd
       res = nil
-      IO.popen(cmd){|io| res = io.read}
-      # puts res
+      IO.popen(cmd){|io| res = io.read} 
+#     STDERR.puts res
       if res == ""
       ## no hit
         return nil
@@ -27,7 +27,7 @@ module Mapp2g
         lines = []
         prev_chr = nil
         res.split(/\n/).each do |l|
-      #    p prev_chr
+#          p prev_chr
           a = l.chomp.split(/\t/)
           unless prev_chr
             lines << l
@@ -42,7 +42,7 @@ module Mapp2g
         a = lines.shift.chomp.split(/\t/)
         left, right = [a[8].to_i, a[9].to_i].sort
         
-        STDERR.puts [left, right].inspect
+#        STDERR.puts [left, right].inspect
     
         lines.each do |l|
           a = l.chomp.split(/\t/)
@@ -57,14 +57,16 @@ module Mapp2g
             break
           end
         end
-      #  p [left, right]
+#        STDERR.puts [left, right].inspect
         
         top_chromosome = res.split(/\n/)[0].split(/\t/)[1]
         h = {
           :top_chromosome => top_chromosome, 
           :left => left,
-          :right => right
+          :right => right,
+          :blast_result => res
         }
+#        STDERR.puts h.inspect
         return h
       end
     end
@@ -117,8 +119,10 @@ module Mapp2g
         tf.close
       
         exonerate_result = exec_exonerate(query, tf.path)
-        return exonerate_result
-      
+        return {
+          :blast_result => hit[:blast_result], 
+          :exonerate_result => exonerate_result
+        }
       else
         return nil
       end

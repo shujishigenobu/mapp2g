@@ -1,9 +1,11 @@
 #!/usr/bin/env ruby
 
-require "mapp2g"
+require_relative '../lib/mapp2g'
+#require 'mapp2g'
 require 'bio'
 require 'tempfile'
 require 'optparse'
+require 'json'
 
 ### Parse options
 
@@ -75,6 +77,8 @@ end
 
 ### Main
 
+report_json_lines = []
+
 Dir.mkdir(outdir)
 
 Bio::FlatFile.open(Bio::FastaFormat, query).each_with_index do |fas, i|
@@ -83,14 +87,27 @@ Bio::FlatFile.open(Bio::FastaFormat, query).each_with_index do |fas, i|
   tf.close
   id = (i + 1).to_s
   query_file_path = "#{outdir}/#{id}.fasta"
-  out_file_path = "#{outdir}/#{id}.exonerate.txt"
   File.open(query_file_path, "w"){|o| o.puts fas}
 
   mapper = Mapp2g::Mapper.new()
   res = mapper.run(query_file_path, genome)
-  File.open(out_file_path, "w"){|o| o.puts res}
+  if res
+    out_file_path = "#{outdir}/#{id}.exonerate.txt"
+    File.open(out_file_path, "w"){|o| o.puts res[:exonerate_result]}
+    out_file_path = "#{outdir}/#{id}.blast.txt"
+    File.open(out_file_path, "w"){|o| o.puts res[:blast_result]}
+    gff3 = Mapp2g::ExonerateOutput.new(res[:exonerate_result]).to_gff3()
+    out_file_path = "#{outdir}/#{id}.exonerate.gff3"
+    File.open(out_file_path, "w"){|o| o.puts gff3}
 
-  gff3 = Mapp2g::ExonerateOutput.new(res).to_gff3()
-  out_file_path = "#{outdir}/#{id}.exonerate.gff3"
-  File.open(out_file_path, "w"){|o| o.puts gff3}
+    report = {"query_id" => fas.entry_id, "exonerate" => res[:exonerate_result], "blast" => res[:blast_result], "gff3" => gff3}
+    report_json_lines << report.to_json
+
+  else
+    STDERR.puts "No hit for #{fas.entry_id}"
+  end
+
 end
+
+report_json = report_json_lines.join("\n")
+File.open("#{outdir}/report.json", "w"){|o| o.puts report_json}
